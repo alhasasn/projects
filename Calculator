@@ -1,0 +1,122 @@
+def add_2_no(num1, num2):#add decimal and logarithms
+    try:
+        return int(num1) + int(num2)
+    except:
+        print("Invalid input")
+
+def add_3_no(num1, num2, num3):
+    try:
+        return int(num1) + int(num2) + int(num3)
+    except:
+        print("Invalid input")
+
+def add_4_no(num1, num2, num3, num4):
+    try:
+        return int(num1) + int(num2) + int(num3) + int(num4)
+    except:
+        print("Invalid input")
+
+def sub_no(num1, num2):
+    try:
+        return int(num1) - int(num2)
+    except:
+        print("Invalid input")
+
+def divide_no(numerator, denominator):
+    try:
+        return int(numerator) / int(denominator)
+    except:
+        print("Invalid input")
+
+def add_2_in_decimal(num1,num2):
+    try: 
+        float(num1) + float(num2)
+    except:
+        print('')
+import math
+
+def factorial_no(n):
+    try:
+        return math.factorial(int(n))
+    except:
+        print("Invalid input")
+
+def multiply_no(num1, num2):
+    try:
+        return int(num1) * int(num2)
+    except:
+        print("Invalid input")
+
+def exponential(a, n):
+    try:
+        return int(a) ** int(n)
+    except:
+        print("Invalid input")
+
+print("THE OPERATIONS THE CALCULATOR CAN DO ARE \n 1. Addition \n 2. Subtraction \n 3. Division \n 4. Multiplication  \n 5. Factorial \n 6. Raise a to a power of n \n 7. ")
+print("Type 'help' to see functions")
+while True:
+    x = input("Which number or operation: ")
+    if x.lower() == "stop":
+        break
+    elif x.lower() == "help":
+        print("THE OPERATIONS THE CALCULATOR CAN DO ARE \n 1. Addition \n 2. Subtraction \n 3. Division \n 4. Multiplication  \n 5. Factorial \n 6. Raise a to a power of n ")
+    elif x=="1" or x.lower() == "addition" or x.strip()== '1':
+        c = input("How many numbers: ")
+        try:
+            if int(c) == 2:
+                v = input("First number: ")
+                b = input("Second number: ")
+                print(add_2_no(v, b))
+            elif int(c) == 3:
+                v = input("First number: ")
+                b = input("Second number: ")
+                c = input("Third number: ")
+                print(add_3_no(v, b, c))
+            elif int(c) == 4:
+                v = input("First number: ")
+                b = input("Second number: ")
+                c = input("Third number: ")
+                d = input("Fourth number: ")
+                try:
+                    print(int(add_4_no(v, b, c, d)))
+                except:
+                    print("")
+            else:
+                print("Invalid input")
+        except:
+            print("")
+    elif  x =='2' or x.lower=='subtraction' or x.strip() == '2':
+            try:
+                l = int(input("FIRST NUMBER ?"))
+                m = int(input("second number ? "))
+                print(sub_no(l,m))
+            except:
+                print("nah ")
+    elif x.lower() == 'division'   or x =='3' or x.strip()=='3':
+        try:
+            k=int(input("Numerator ?"))
+            kk= int(input('DEnominator ? '))
+            print(divide_no(k,kk))
+        except :
+            print("cant do that") 
+    elif x.lower() == 'multiplication' or x== '4' or x.strip() =='4':
+        try:
+            cb  = int(input(" first no ? "))
+            bc = int(input("second no "))
+            print(multiply_no(cb,bc)) 
+        except:
+            print('nah ') 
+    elif x.lower() == 'factorial' or x== '5':
+        try:
+            z = int(input("NUMBER ? "))
+            print(factorial_no(z))
+        except:
+            print("nah ")
+    elif x==  '6' or x.strip() == "6":
+        try:
+            p = int(input('BASE ? '))
+            bb= int(input('power ? '))
+            print(exponential(p,bb))
+        except:
+            print("nah nigggga")
