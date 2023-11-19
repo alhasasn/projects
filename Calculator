@@ -119,4 +119,4 @@ while True:
             bb= int(input('power ? '))
             print(exponential(p,bb))
         except:
-            print("nah nigggga")
+            print("nah")
