@@ -14,7 +14,6 @@ while True :
         except:
             print('Item not in list')       
     elif item == 'exit':
-        todolist.remove('exit')
         for item in todolist:
             print(item)
         break
