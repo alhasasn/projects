@@ -10,8 +10,6 @@ while True:
         continue
     if player_chioce.lower() in ['exit', 'quit']:
        break
-
-
     if player_chioce==computer_choice:
         print(play_string.format(player_chioce) )
         print(computer_string.format(computer_choice))
@@ -40,5 +38,6 @@ while True:
         print(play_string.format(player_chioce))
         print(computer_string.format(computer_choice))
         print('You Win')
-    
+        
+print('THANK YOU FOR THE GAME')    
 
