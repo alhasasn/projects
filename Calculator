@@ -33,19 +33,9 @@ def add_2_in_decimal(num1,num2):
         float(num1) + float(num2)
     except:
         print('')
-import math
-
-def factorial_no(n):
-    try:
-        return math.factorial(int(n))
-    except:
-        print("Invalid input")
-
-def multiply_no(num1, num2):
-    try:
-        return int(num1) * int(num2)
-    except:
-        print("Invalid input")
+def factorial(n):
+    if n ==  1:  return 1
+    return n*factorial(n-1)  # added recursion
 
 def exponential(a, n):
     try:
@@ -110,7 +100,7 @@ while True:
     elif x.lower() == 'factorial' or x== '5':
         try:
             z = int(input("NUMBER ? "))
-            print(factorial_no(z))
+            print(factorial(z))
         except:
             print("nah ")
     elif x==  '6' or x.strip() == "6":
